@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
+            <exclude>./app/Http</exclude>
+            <exclude>./app/Console</exclude>
+        </testsuite>
+
+        <testsuite name="Feature">
+            <directory suffix="Test.php">./tests/Feature</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./app</directory>
+            <exclude>
+                <directory suffix=".php">./app/Console</directory>
+                <directory suffix=".php">./app/Providers</directory>
+                <directory suffix=".php">./app/Http/Controllers/Auth</directory>
+                <directory suffix=".php">./app/Http/Middleware</directory>
+                <file>./app/Constants/Attribute.php</file>
+                <file>./app/Constants/Messages.php</file>
+                <file>./app/Exceptions/Handler.php</file>
+                <file>./app/User.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
+    <php>
+        <server name="APP_ENV" value="testing"/>
+        <server name="BCRYPT_ROUNDS" value="4"/>
+        <server name="CACHE_DRIVER" value="array"/>
+        <server name="MAIL_DRIVER" value="array"/>
+        <server name="QUEUE_CONNECTION" value="sync"/>
+        <server name="SESSION_DRIVER" value="array"/>
+    </php>
+    <logging>
+        <log type="coverage-html" target="./coverage/html" lowUpperBound="35" highLowerBound="70"/>
+        <log type="coverage-clover" target="./coverage/clover.xml"/>
+    </logging>
+</phpunit>
