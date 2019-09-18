@@ -26,6 +26,14 @@ class Attribute
     const STATUS            = 'status';
     const STATUS_CODE       = 'status_code';
     const ERRORS            = 'errors';
+    /*####### TABELAS   #######################*/
+    const TB_CATEGORIA      = 'tb_categoria';
+    /*######## CÓDIGOS ########################*/
+    const CD_CATEGORIA      = 'cd_categoria';
+    /*########  NOMES ##########################*/
+    const NO_CATEGORIA      = 'no_categoria';
+    /*######## DESCRIÇÃO #######################*/
+    const DS_CATEGORIA      = 'ds_categoria';
     /*####### DATA E HORA ################*/
     const TS_CRIADO         = 'ts_criado';
     const TS_REMOVIDO       = 'ts_removido';
