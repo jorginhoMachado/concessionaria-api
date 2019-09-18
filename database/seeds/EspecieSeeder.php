@@ -1,23 +1,23 @@
 <?php
 
 use App\Constants\Attribute;
-use App\Models\Categoria;
+use App\Models\Especie;
 use Illuminate\Database\Seeder;
-use PhpParser\Builder;
 
-class CategoriaSeeder extends Seeder
+class EspecieSeeder extends Seeder
 {
-    /** @var Categoria $model */
+    /** @var Especie $model */
     public $model;
 
     /**
-     * CategoriaSeeder constructor.
-     * @param Categoria $model
+     * EspecieSeeder constructor.
+     * @param Especie $model
      */
-    public function __construct(Categoria $model)
+    public function __construct(Especie $model)
     {
         $this->model = $model;
     }
+
 
     /**
      * Run the database seeds.
@@ -29,25 +29,31 @@ class CategoriaSeeder extends Seeder
     {
         $data = [
             [
-                Attribute::NO_CATEGORIA => 'Oficial',
+                Attribute::NO_ESPECIE => 'Passageiro',
                 Attribute::TS_CRIADO => new \DateTime(),
             ],
             [
-                Attribute::NO_CATEGORIA => 'Diplomática',
-                Attribute::DS_CATEGORIA => 'de representação diplomática, de repartições consulares de carreira
-                 ou organismos internacionais acreditados junto ao Governo brasileiro.',
+                Attribute::NO_ESPECIE => 'Carga',
                 Attribute::TS_CRIADO => new \DateTime(),
             ],
             [
-                Attribute::NO_CATEGORIA => 'Particular',
+                Attribute::NO_ESPECIE => 'Misto',
                 Attribute::TS_CRIADO => new \DateTime(),
             ],
             [
-                Attribute::NO_CATEGORIA => 'Aluguel',
+                Attribute::NO_ESPECIE => 'Competição',
                 Attribute::TS_CRIADO => new \DateTime(),
             ],
             [
-                Attribute::NO_CATEGORIA => 'Aprendizagem',
+                Attribute::NO_ESPECIE => 'Tração',
+                Attribute::TS_CRIADO => new \DateTime(),
+            ],
+            [
+                Attribute::NO_ESPECIE => 'Especial',
+                Attribute::TS_CRIADO => new \DateTime(),
+            ],
+            [
+                Attribute::NO_ESPECIE => 'Coleção',
                 Attribute::TS_CRIADO => new \DateTime(),
             ],
         ];
